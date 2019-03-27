@@ -1,0 +1,19 @@
+.deck {
+  display: flex;
+  flex-direction: row;
+  .name {
+    flex: 3;
+  }
+  .status {
+    flex: 1;
+    &.not-played {
+      background-color: grey;
+    }
+    &.loss {
+      background-color: red;
+    }
+    &.win {
+      background-color: green;
+    }
+  }
+}

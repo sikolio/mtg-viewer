@@ -1,0 +1,26 @@
+.match-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 200px;
+  // border: 1px solid grey;
+  box-shadow: 1px 1px rgba(0, 0, 0, .2);
+  .x {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .players {
+    display: flex;
+    flex-direction: row;
+    .playerA, .playerB {
+      flex: 1;
+      .image img {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+}

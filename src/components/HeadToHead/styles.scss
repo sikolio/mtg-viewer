@@ -1,0 +1,12 @@
+.bar {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  .right {
+    background-color: grey;
+  }
+  .left {
+    background-color: white;
+  }
+}

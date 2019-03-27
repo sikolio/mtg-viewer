@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import HeadToHead from './components/HeadToHead/HeadToHead';
+import MatchCard from './components/MatchCard/MatchCard';
+import SideCard from './components/SideCard/SideCard';
+import Twitch from './components/Twitch/Twitch';
+import { PlayerA, PlayerB } from './assets/playerDefaults';
+import Bracket from './components/Bracket/Bracket';
 
 class App extends Component {
+  state = {
+    activeMatch: { playerA: PlayerA, playerB: PlayerB},
+    bracketHover: { playerA: PlayerA, playerB: PlayerB }
+  }
   render() {
+    const { activeMatch, bracketHover } = this.state
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className='live-match'>
+          <SideCard side='left' player={activeMatch.playerA} />
+          <Twitch url='magic' />
+          <SideCard side='right' player={activeMatch.playerB} />
+        </div>
+        <HeadToHead rightWins={3} leftWins={6}></HeadToHead>
+        <div className='bracket-viewer'>
+          <Bracket onActiveChange={(bracketHover) => this.setState({ bracketHover })} />
+          <MatchCard playerA={bracketHover.playerA} playerB={bracketHover.playerB} winsPlayerA={3} winsPlayerB={5}></MatchCard>
+        </div>
       </div>
     );
   }

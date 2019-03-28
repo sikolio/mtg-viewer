@@ -4,23 +4,45 @@
   justify-content: space-between;
   width: 300px;
   height: 200px;
-  // border: 1px solid grey;
   box-shadow: 1px 1px rgba(0, 0, 0, .2);
+  margin: 16px;
+  border-radius: 5px;
   .x {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-weight: 700;
   }
   .players {
     display: flex;
     flex-direction: row;
+    padding: 8px 0;
+    background: #100c1b;
+    border-radius: 5px 5px 0;
+    .deck {
+      opacity: 0.8;
+    }
+    .deck:last-child {
+      padding-top: 0;
+    }
     .playerA, .playerB {
       flex: 1;
-      .image img {
-        border-radius: 50%;
-        height: 100px;
-        width: 100px;
+      .image {
+        padding: 8px 0;
+        img {
+          border-radius: 50%;
+          height: 100px;
+          width: 100px;
+        }
       }
+    }
+  }
+  .bar {
+    .left {
+      border-radius: 0 0 0 5px;
+    }
+    .right {
+      border-radius: 0 0 5px 0;
     }
   }
 }

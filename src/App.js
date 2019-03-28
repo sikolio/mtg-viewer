@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import HeadToHead from './components/HeadToHead/HeadToHead';
 import MatchCard from './components/MatchCard/MatchCard';
@@ -7,6 +6,7 @@ import SideCard from './components/SideCard/SideCard';
 import Twitch from './components/Twitch/Twitch';
 import { PlayerA, PlayerB } from './assets/playerDefaults';
 import Bracket from './components/Bracket/Bracket';
+import Tabs from './components/Tabs/Tabs';
 
 class App extends Component {
   state = {
@@ -24,8 +24,11 @@ class App extends Component {
         </div>
         <HeadToHead rightWins={3} leftWins={6}></HeadToHead>
         <div className='bracket-viewer'>
-          <Bracket onActiveChange={(bracketHover) => this.setState({ bracketHover })} />
-          <MatchCard playerA={bracketHover.playerA} playerB={bracketHover.playerB} winsPlayerA={3} winsPlayerB={5}></MatchCard>
+          <Tabs />
+          <div className="bracket-container">
+            <Bracket onActiveChange={(bracketHover) => this.setState({ bracketHover })} />
+            <MatchCard playerA={bracketHover.playerA} playerB={bracketHover.playerB} winsPlayerA={3} winsPlayerB={5}></MatchCard>
+          </div>
         </div>
       </div>
     );

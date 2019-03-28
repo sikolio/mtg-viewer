@@ -1,7 +1,7 @@
-import dukeImage from './duke.PNG'
-import juzaImage from './juza.PNG'
+import dukeImage from './duke.png'
+import juzaImage from './juza.png'
 import USA from './flags/usa.PNG'
-import CZECH from './flags/czech.PNG'
+import CZECH from './flags/czech.svg'
 
 export const PlayerA = {
   country: USA,

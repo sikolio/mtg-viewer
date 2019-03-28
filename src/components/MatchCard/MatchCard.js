@@ -15,8 +15,12 @@ const MatchCard = ({ playerA = PlayerA, playerB = PlayerB, winsPlayerA = 0, wins
           <div className='image'>
             <img src={playerA.image}/>
           </div>
-          <Deck deck={playerA.deck1} />
-          <Deck deck={playerA.deck2} />
+          <div className='decks'> 
+            <div className='decks-container'>
+              <Deck deck={playerA.deck1} />
+              <Deck deck={playerA.deck2} />
+            </div>
+          </div>          
         </div>
         <div className='x'>
           <span>X</span>
@@ -28,8 +32,10 @@ const MatchCard = ({ playerA = PlayerA, playerB = PlayerB, winsPlayerA = 0, wins
           <div className='image'>
             <img src={playerB.image}/>
           </div>
-          <Deck deck={playerB.deck1} />
-          <Deck deck={playerB.deck2} />
+          <div className='decks-container'>
+            <Deck deck={playerB.deck1} />
+            <Deck deck={playerB.deck2} />
+          </div>
         </div>
       </div>
       <HeadToHead leftWins={winsPlayerA} rightWins={winsPlayerB} />

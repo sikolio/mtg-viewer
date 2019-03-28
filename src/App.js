@@ -24,7 +24,7 @@ class App extends Component {
         </div>
         <HeadToHead rightWins={3} leftWins={6}></HeadToHead>
         <div className='bracket-viewer'>
-          <Tabs />
+          <Tabs activeTab={2}/>
           <div className="bracket-container">
             <Bracket onActiveChange={(bracketHover) => this.setState({ bracketHover })} />
             <MatchCard playerA={bracketHover.playerA} playerB={bracketHover.playerB} winsPlayerA={3} winsPlayerB={5}></MatchCard>

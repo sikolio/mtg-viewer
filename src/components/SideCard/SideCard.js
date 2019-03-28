@@ -18,8 +18,18 @@ const SideCard = ({ side = 'left', player = PlayerA }) => {
           </div>
         </div>
         <div className='decks'>
-          <Deck deck={player.deck1} />
-          <Deck deck={player.deck2} />
+          <div className="decks-header">
+            <h4>Deck</h4>
+            <h4>Status</h4>
+          </div>
+          <div className='decks-container'>
+            <Deck deck={player.deck1} />
+            <Deck deck={player.deck2} />
+          </div>
+          <div className="decks-footer">
+            <h4>Win Rate</h4>
+            <h4>{player.winRate * 100} %</h4>
+          </div>
         </div>
       </div>
     </div>

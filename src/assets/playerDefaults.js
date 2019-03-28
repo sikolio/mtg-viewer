@@ -1,5 +1,5 @@
-import dukeImage from './duke.png'
-import juzaImage from './juza.png'
+import dukeImage from './players/duke.png'
+import juzaImage from './players/juza.png'
 import USA from './flags/usa.PNG'
 import CZECH from './flags/czech.svg'
 

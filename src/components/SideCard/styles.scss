@@ -68,5 +68,24 @@
     margin: 0 auto;
     position: relative;
     max-width: 180px;
+    .decks-header, .decks-footer {
+      display: flex;
+      justify-content: space-between;
+
+      h4 {
+        text-transform: uppercase;
+        font-family: 'Roboto Condensed', sans-serif;
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+    .decks-header {
+      padding: 8px 8px 4px 8px;
+      border-bottom: 1px solid #780116;
+    }
+    .decks-footer {
+      padding: 4px 8px 8px 8px;
+      border-top: 1px solid #780116;
+    }
   }
 }

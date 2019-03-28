@@ -1,19 +1,26 @@
 .deck {
   display: flex;
-  flex-direction: row;
-  .name {
+  padding: 8px;
+  text-transform: uppercase;
+  &:first-child {
+    padding-bottom: 0;
+  }
+  .deck-name {
     flex: 3;
+    text-align: left;
+    font-size: 14px;
   }
   .status {
     flex: 1;
+    font-size: 16px;
     &.not-played {
-      background-color: grey;
+      color: grey;
     }
     &.loss {
-      background-color: red;
+      color: red;
     }
     &.win {
-      background-color: green;
+      color: green;
     }
   }
 }
